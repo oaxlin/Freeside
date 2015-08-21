@@ -1,0 +1,19 @@
+<% include('tr-td-label.html', @_ ) %>
+
+  <TD <% $cell_style %>>
+
+    <% $curr_value |h %>
+
+  </TD>
+
+</TR>
+
+<%init>
+
+my %opt = @_;
+
+my $cell_style = $opt{'cell_style'} ? ' STYLE="'. $opt{'cell_style'}. '" ' : ' STYLE="color:#666666" ';
+
+my $curr_value = $opt{'curr_value'};
+
+</%init>
